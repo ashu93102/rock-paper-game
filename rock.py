@@ -34,48 +34,51 @@ scissors = '''
 print("Welcome to rock paper scissors")
 user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
 
-print("you choose: ")
-
-#user condition
-if user_choice == 0:
-    print(rock)
-elif user_choice == 1:
-    print(paper)
-elif user_choice == 2:
-    print(scissors)
+if user_choice >= 3:
+    print("You have entered wrong input. please try again")
 else:
-    ("Invalid Choice")
+    print("you choose: ")
 
-comp_choice = random.randint(0, 2)
+    #user condition
+    if user_choice == 0:
+        print(rock)
+    elif user_choice == 1:
+        print(paper)
+    elif user_choice == 2:
+        print(scissors)
+    else:
+        ("Invalid Choice")
 
-print("Computer choose: ")
+    comp_choice = random.randint(0, 2)
 
-#computer section
-if comp_choice == 0:
-    print(rock)
-elif comp_choice == 1:
-    print(paper)
-elif comp_choice == 2:
-    print(scissors)
-else:
-    ("Invalid Choice")
+    print("Computer choose: ")
 
-# checking wo wins
-if user_choice == 0 and comp_choice == 1:
-    print("You Loose")
-if user_choice == 1 and comp_choice == 1:
-    print("Draw")
-if user_choice == 2 and comp_choice == 1:
-    print("You win")
-if user_choice == 0 and comp_choice == 2:
-    print("You Win")
-if user_choice == 1 and comp_choice == 2:
-    print("You Loose")
-if user_choice == 2 and comp_choice == 2:
-    print("Draw")
-if user_choice == 0 and comp_choice == 0:
-    print("Draw")
-if user_choice == 1 and comp_choice == 0:
-    print("You Win")
-if user_choice == 2 and comp_choice == 0:
-    print("You Loose")
+    #computer section
+    if comp_choice == 0:
+        print(rock)
+    elif comp_choice == 1:
+        print(paper)
+    elif comp_choice == 2:
+        print(scissors)
+    else:
+        ("Invalid Choice")
+
+    # checking wo wins
+    if user_choice == 0 and comp_choice == 1:
+        print("You Loose")
+    if user_choice == 1 and comp_choice == 1:
+        print("Draw")
+    if user_choice == 2 and comp_choice == 1:
+        print("You win")
+    if user_choice == 0 and comp_choice == 2:
+        print("You Win")
+    if user_choice == 1 and comp_choice == 2:
+        print("You Loose")
+    if user_choice == 2 and comp_choice == 2:
+        print("Draw")
+    if user_choice == 0 and comp_choice == 0:
+        print("Draw")
+    if user_choice == 1 and comp_choice == 0:
+        print("You Win")
+    if user_choice == 2 and comp_choice == 0:
+        print("You Loose")
